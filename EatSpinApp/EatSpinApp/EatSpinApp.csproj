@@ -8,4 +8,9 @@
     <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repository\LocalRepository\" />
+    <Folder Include="Repository\OnlineRepository\" />
+  </ItemGroup>
 </Project>
