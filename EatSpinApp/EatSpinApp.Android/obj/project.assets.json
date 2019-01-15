@@ -997,7 +997,8 @@
       "Xamarin.Android.Support.v7.AppCompat >= 25.4.0.2",
       "Xamarin.Android.Support.v7.CardView >= 25.4.0.2",
       "Xamarin.Android.Support.v7.MediaRouter >= 25.4.0.2",
-      "Xamarin.Forms >= 3.0.0.446417"
+      "Xamarin.Forms >= 3.0.0.446417",
+      "sqlite-net-pcl >= 1.5.231"
     ]
   },
   "packageFolders": {
@@ -1060,6 +1061,10 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[3.0.0.446417, )"
+          },
+          "sqlite-net-pcl": {
+            "target": "Package",
+            "version": "[1.5.231, )"
           }
         }
       }
