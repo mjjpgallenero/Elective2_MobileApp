@@ -39,12 +39,18 @@ namespace EatSpinApp.Repository.LocalRepository
 
         public int Update(T record)
         {
-            throw new NotImplementedException();
+            using (var db = new SQLiteConnection(dbPath))
+            {
+                return db.Update(record);
+            }
         }
 
         public int Delete(T record)
         {
-            throw new NotImplementedException();
+            using (var db = new SQLiteConnection(dbPath))
+            {
+                return db.Delete(record);
+            }
         }
     }
 }
