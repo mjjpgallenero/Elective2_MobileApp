@@ -1,4 +1,6 @@
 using System;
+using EatSpinApp.Repository.LocalRepository;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,8 +12,9 @@ namespace EatSpinApp
 		public App ()
 		{
 			InitializeComponent();
-
-			MainPage = new MainPage();
+            
+			MainPage = new NavigationPage(MainPage); 
+            
 		}
 
 		protected override void OnStart ()

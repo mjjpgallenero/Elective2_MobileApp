@@ -4,11 +4,17 @@
              xmlns:local="clr-namespace:EatSpinApp"
              x:Class="EatSpinApp.MainPage">
 
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel></local:MainPageViewModel>
+    </ContentPage.BindingContext>
+
     <StackLayout>
         <!-- Place new controls here -->
+        <Entry Placeholder="Enter test entry" Text="{Binding Path=TestEntry}"/>
+        <Button Text="Add Test" Command="{Binding OpenTest}"/>
     	<Label Text="EatSpin! Alpha" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="EndAndExpand" />
     </StackLayout>
     
 

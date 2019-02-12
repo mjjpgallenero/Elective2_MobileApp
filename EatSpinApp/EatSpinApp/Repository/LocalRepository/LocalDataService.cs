@@ -9,14 +9,14 @@ namespace EatSpinApp.Repository.LocalRepository
 {
     public class LocalDataService<T> : IDataService<T> where T : class, new()
     {
-        private static readonly string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal));
+        protected static readonly string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal));
         //private SQLiteConnection db = new SQLiteConnection(dbPath);
 
         public void Add(T record)
         {
             using (var db = new SQLiteConnection(dbPath))
             {
-                db.CreateTable<Restaurant>();
+                db.CreateTable<T>();
                 db.Insert(record);
             }
         }

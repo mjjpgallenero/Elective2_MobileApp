@@ -12,6 +12,7 @@ namespace EatSpinApp
 		public MainPage()
 		{
 			InitializeComponent();
+            
 		}
 	}
 }
