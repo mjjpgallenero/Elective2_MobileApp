@@ -1,36 +1,41 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using EatSpinApp.Annotations;
 using EatSpinApp.Models;
 using EatSpinApp.Repository;
 using EatSpinApp.Repository.LocalRepository;
+using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using Xamarin.Forms;
 
 namespace EatSpinApp
 {
-    public class MainPageViewModel : INotifyPropertyChanged
+    public class MainPageViewModel : ObservableObject
     {
         private IRepository repository;
-        public void Test()
+
+        public MainPageViewModel()
         {
             repository = new LocalRepository();
+            TestCommand = new Command(async () => await OpenTestCommand());
         }
-
         public string TestEntry { get; set; }
-        public RelayCommand OpenTest => new RelayCommand(OpenTestCommand);
+        public ObservableCollection<Restaurant> TestList { get; } = new ObservableCollection<Restaurant>();
+        public ICommand TestCommand { get; private set; }
 
-        private void OpenTestCommand()
+        private async Task OpenTestCommand()
         {
-            repository.Restaurant.Add(new Restaurant{RestaurantName = TestEntry});
+            //repository.Restaurant.Add(new Restaurant { RestaurantName = TestEntry });
+            //var restaurants = repository.Restaurant.GetRange();
+            //foreach (var restaurant in restaurants)
+            //{
+            //    TestList.Add(restaurant);
+            //}
+            //TestList.Add(new Restaurant{RestaurantName = TestEntry});
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void RaisePropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

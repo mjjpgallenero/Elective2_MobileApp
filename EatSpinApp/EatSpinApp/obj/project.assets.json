@@ -102,11 +102,10 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -232,11 +231,10 @@
       ]
     },
     "NETStandard.Library/2.0.1": {
-      "sha512": "cAV6mcKvMeAkoIW7xI+LqvzUZ9Q7IK/IVMkFK2HdHa6h2j7UTLF4Hec64Qr+9CIxgPpvzT+KWAVOOeStbYweRg==",
+      "sha512": "oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
       "type": "package",
       "path": "netstandard.library/2.0.1",
       "files": [
-        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/NETStandard.Library.targets",
@@ -596,23 +594,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mjjpgallenero\\.nuget\\packages\\": {},
+    "C:\\Users\\Vinson\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mjjpgallenero\\Documents\\GitHub\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\EatSpinApp.csproj",
+      "projectUniqueName": "C:\\Users\\Vinson\\Desktop\\EatSpin Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\EatSpinApp.csproj",
       "projectName": "EatSpinApp",
-      "projectPath": "C:\\Users\\mjjpgallenero\\Documents\\GitHub\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\EatSpinApp.csproj",
-      "packagesPath": "C:\\Users\\mjjpgallenero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mjjpgallenero\\Documents\\GitHub\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\obj\\",
+      "projectPath": "C:\\Users\\Vinson\\Desktop\\EatSpin Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\EatSpinApp.csproj",
+      "packagesPath": "C:\\Users\\Vinson\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vinson\\Desktop\\EatSpin Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\mjjpgallenero\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vinson\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

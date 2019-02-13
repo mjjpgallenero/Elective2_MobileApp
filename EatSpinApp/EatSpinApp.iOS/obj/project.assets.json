@@ -1236,20 +1236,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mjjpgallenero\\.nuget\\packages\\": {}
+    "C:\\Users\\Vinson\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mjjpgallenero\\Documents\\GitHub\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp.iOS\\EatSpinApp.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Vinson\\Desktop\\EatSpin Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp.iOS\\EatSpinApp.iOS.csproj",
       "projectName": "EatSpinApp.iOS",
-      "projectPath": "C:\\Users\\mjjpgallenero\\Documents\\GitHub\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp.iOS\\EatSpinApp.iOS.csproj",
-      "packagesPath": "C:\\Users\\mjjpgallenero\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mjjpgallenero\\Documents\\GitHub\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Vinson\\Desktop\\EatSpin Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp.iOS\\EatSpinApp.iOS.csproj",
+      "packagesPath": "C:\\Users\\Vinson\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vinson\\Desktop\\EatSpin Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\mjjpgallenero\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vinson\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1262,8 +1262,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\mjjpgallenero\\Documents\\GitHub\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\EatSpinApp.csproj": {
-              "projectPath": "C:\\Users\\mjjpgallenero\\Documents\\GitHub\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\EatSpinApp.csproj"
+            "C:\\Users\\Vinson\\Desktop\\EatSpin Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\EatSpinApp.csproj": {
+              "projectPath": "C:\\Users\\Vinson\\Desktop\\EatSpin Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\EatSpinApp.csproj"
             }
           }
         }
