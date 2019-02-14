@@ -20,13 +20,17 @@ namespace EatSpinApp
         public MainPageViewModel()
         {
             repository = new LocalRepository();
-            TestCommand = new Command(async () => await OpenTestCommand());
+            var restaurants = repository.Restaurant.GetRange();
+            foreach (var restaurant in restaurants)
+            {
+                TestList.Add(restaurant);
+            }
         }
         public string TestEntry { get; set; }
         public ObservableCollection<Restaurant> TestList { get; } = new ObservableCollection<Restaurant>();
-        public ICommand TestCommand { get; private set; }
+        public ICommand TestCommand => new Command(OpenTestCommand);
 
-        private async Task OpenTestCommand()
+        private void OpenTestCommand()
         {
             TestList.Clear();
             repository.Restaurant.Add(new Restaurant { RestaurantName = TestEntry });
