@@ -13,7 +13,7 @@ namespace EatSpinApp
 		{
 			InitializeComponent();
             
-			MainPage = new NavigationPage(MainPage); 
+			MainPage = new NavigationPage(new MainPage()); 
             
 		}
 
