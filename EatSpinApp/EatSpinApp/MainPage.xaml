@@ -12,6 +12,7 @@
         <!-- Place new controls here -->
         <Entry Placeholder="Enter test entry" Text="{Binding Path=TestEntry}"/>
         <Button Text="Add Test" Command="{Binding TestCommand}"/>
+        <Button Text="Delete Test" Command="{Binding TestDelete}"/>
         <ListView ItemsSource="{Binding TestList}"></ListView>
     	<Label Text="EatSpin! Alpha" 
            HorizontalOptions="Center"

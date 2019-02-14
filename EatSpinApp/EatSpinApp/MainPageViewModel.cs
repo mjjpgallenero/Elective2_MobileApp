@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -29,7 +30,6 @@ namespace EatSpinApp
         public string TestEntry { get; set; }
         public ObservableCollection<Restaurant> TestList { get; } = new ObservableCollection<Restaurant>();
         public ICommand TestCommand => new Command(OpenTestCommand);
-
         private void OpenTestCommand()
         {
             TestList.Clear();
@@ -42,5 +42,17 @@ namespace EatSpinApp
             //TestList.Add(new Restaurant{RestaurantName = TestEntry});
         }
 
+        public ICommand TestDelete => new Command(DeleteTestCommand);
+        private void DeleteTestCommand()
+        {
+            var restaurant = TestList.LastOrDefault();
+            repository.Restaurant.Delete(restaurant);
+            TestList.Clear();
+            var restos = repository.Restaurant.GetRange();
+            foreach (var resto in restos)
+            {
+                TestList.Add(resto);
+            }
+        }
     }
 }
