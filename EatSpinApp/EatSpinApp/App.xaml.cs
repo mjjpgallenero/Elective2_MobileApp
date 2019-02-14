@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+using EatSpinApp.Models;
 using EatSpinApp.Repository.LocalRepository;
 using SQLite;
 using Xamarin.Forms;
@@ -12,12 +14,16 @@ namespace EatSpinApp
 		public App ()
 		{
 			InitializeComponent();
-            
-			MainPage = new NavigationPage(new MainPage()); 
+		    using (var db = new SQLiteConnection(dbPath))
+		    {
+		        db.CreateTable<Restaurant>();
+		    }
+            MainPage = new NavigationPage(new MainPage()); 
             
 		}
+	    protected static readonly string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Restaurants.db3");
 
-		protected override void OnStart ()
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}

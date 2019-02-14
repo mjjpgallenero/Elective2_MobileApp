@@ -28,12 +28,13 @@ namespace EatSpinApp
 
         private async Task OpenTestCommand()
         {
-            //repository.Restaurant.Add(new Restaurant { RestaurantName = TestEntry });
-            //var restaurants = repository.Restaurant.GetRange();
-            //foreach (var restaurant in restaurants)
-            //{
-            //    TestList.Add(restaurant);
-            //}
+            TestList.Clear();
+            repository.Restaurant.Add(new Restaurant { RestaurantName = TestEntry });
+            var restaurants = repository.Restaurant.GetRange();
+            foreach (var restaurant in restaurants)
+            {
+                TestList.Add(restaurant);
+            }
             //TestList.Add(new Restaurant{RestaurantName = TestEntry});
         }
 

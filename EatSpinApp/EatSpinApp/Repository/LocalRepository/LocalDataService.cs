@@ -9,14 +9,13 @@ namespace EatSpinApp.Repository.LocalRepository
 {
     public class LocalDataService<T> : IDataService<T> where T : class, new()
     {
-        protected static readonly string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal));
+        protected static readonly string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Restaurants.db3");
         //private SQLiteConnection db = new SQLiteConnection(dbPath);
 
         public void Add(T record)
         {
             using (var db = new SQLiteConnection(dbPath))
             {
-                db.CreateTable<T>();
                 db.Insert(record);
             }
         }
@@ -33,7 +32,8 @@ namespace EatSpinApp.Repository.LocalRepository
         {
             using (var db = new SQLiteConnection(dbPath))
             {
-                return db.Table<T>().Where(condition).ToList();
+                if(condition == null)  return db.Table<T>().ToList();
+                else return db.Table<T>().Where(condition).ToList();
             }
         }
 

@@ -3635,10 +3635,7 @@ namespace EatSpinApp.Droid
 		{
 			
 			// aapt resource value: 0
-			public static int icon = 0;
-			
-			// aapt resource value: 0
-			public static int icon_round = 0;
+			public static int Icon = 0;
 			
 			// aapt resource value: 0
 			public static int launcher_foreground = 0;
