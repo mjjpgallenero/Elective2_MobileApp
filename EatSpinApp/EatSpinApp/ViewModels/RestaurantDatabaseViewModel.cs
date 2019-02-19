@@ -4,6 +4,7 @@ using EatSpinApp.Models;
 using EatSpinApp.Repository;
 using EatSpinApp.Repository.LocalRepository;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using Xamarin.Forms;
 
 namespace EatSpinApp
@@ -87,7 +88,7 @@ namespace EatSpinApp
                 RestaurantNameEntry = null;
                 SelectedRestaurant = null;
             }
-        }
+        } 
 
     }
 }

@@ -7,8 +7,9 @@
     <StackLayout>
         <!-- Place new controls here -->
         <Button Text="Open" Command="{Binding TestNavigate}"/>
-        <Button Text="Spin"/>
-    	<Label Text="EatSpin! Alpha" 
+        <Label Text="{Binding TestSpinItem}"/>
+        <Button Text="Spin" Command="{Binding TestSpin}" VerticalOptions="EndAndExpand"/>
+        <Label Text="EatSpin! Alpha" 
            HorizontalOptions="Center"
            VerticalOptions="EndAndExpand" />
     </StackLayout>
