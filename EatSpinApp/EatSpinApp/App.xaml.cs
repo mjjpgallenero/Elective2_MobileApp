@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using EatSpinApp.Models;
 using EatSpinApp.Repository.LocalRepository;
+using GalaSoft.MvvmLight.Ioc;
 using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,13 +12,26 @@ namespace EatSpinApp
 {
 	public partial class App : Application
 	{
-		public App ()
+	    private static ViewModelLocator _locator;
+	    public static ViewModelLocator Locator
+	    {
+	        get
+	        {
+	            return _locator ?? (_locator = new ViewModelLocator());
+	        }
+	    }
+        public App ()
 		{
 			InitializeComponent();
 		    using (var db = new SQLiteConnection(dbPath))
 		    {
 		        db.CreateTable<Restaurant>();
 		    }
+
+		    INavigationService navigationService;
+            navigationService = new NavigationService();
+
+
             MainPage = new NavigationPage(new MainPage()); 
             
 		}

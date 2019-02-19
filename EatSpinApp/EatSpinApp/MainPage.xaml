@@ -13,7 +13,16 @@
         <Entry Placeholder="Enter test entry" Text="{Binding Path=TestEntry}"/>
         <Button Text="Add Test" Command="{Binding TestCommand}"/>
         <Button Text="Delete Test" Command="{Binding TestDelete}"/>
-        <ListView ItemsSource="{Binding TestList}"></ListView>
+        <ListView ItemsSource="{Binding TestList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding RestaurantName}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Open" Command="{Binding TestNavigate}"/>"
+        <Label/>
+        <Button Text="Spin"/>
     	<Label Text="EatSpin! Alpha" 
            HorizontalOptions="Center"
            VerticalOptions="EndAndExpand" />

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.16299": {
-      "CommonServiceLocator/2.0.2": {
+      "CommonServiceLocator/2.0.4": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
@@ -380,6 +380,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CommonServiceLocator": "2.0.4",
           "MvvmLightLibs": "5.4.1.1",
           "Xamarin.Forms": "3.0.0.446417",
           "sqlite-net-pcl": "1.5.231"
@@ -393,7 +394,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm": {
-      "CommonServiceLocator/2.0.2": {
+      "CommonServiceLocator/2.0.4": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
@@ -934,6 +935,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CommonServiceLocator": "2.0.4",
           "MvvmLightLibs": "5.4.1.1",
           "Xamarin.Forms": "3.0.0.446417",
           "sqlite-net-pcl": "1.5.231"
@@ -947,7 +949,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm-aot": {
-      "CommonServiceLocator/2.0.2": {
+      "CommonServiceLocator/2.0.4": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
@@ -1489,6 +1491,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CommonServiceLocator": "2.0.4",
           "MvvmLightLibs": "5.4.1.1",
           "Xamarin.Forms": "3.0.0.446417",
           "sqlite-net-pcl": "1.5.231"
@@ -1502,7 +1505,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-arm64-aot": {
-      "CommonServiceLocator/2.0.2": {
+      "CommonServiceLocator/2.0.4": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
@@ -1866,6 +1869,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CommonServiceLocator": "2.0.4",
           "MvvmLightLibs": "5.4.1.1",
           "Xamarin.Forms": "3.0.0.446417",
           "sqlite-net-pcl": "1.5.231"
@@ -1879,7 +1883,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x64": {
-      "CommonServiceLocator/2.0.2": {
+      "CommonServiceLocator/2.0.4": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
@@ -2420,6 +2424,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CommonServiceLocator": "2.0.4",
           "MvvmLightLibs": "5.4.1.1",
           "Xamarin.Forms": "3.0.0.446417",
           "sqlite-net-pcl": "1.5.231"
@@ -2433,7 +2438,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x64-aot": {
-      "CommonServiceLocator/2.0.2": {
+      "CommonServiceLocator/2.0.4": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
@@ -2975,6 +2980,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CommonServiceLocator": "2.0.4",
           "MvvmLightLibs": "5.4.1.1",
           "Xamarin.Forms": "3.0.0.446417",
           "sqlite-net-pcl": "1.5.231"
@@ -2988,7 +2994,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x86": {
-      "CommonServiceLocator/2.0.2": {
+      "CommonServiceLocator/2.0.4": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
@@ -3529,6 +3535,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CommonServiceLocator": "2.0.4",
           "MvvmLightLibs": "5.4.1.1",
           "Xamarin.Forms": "3.0.0.446417",
           "sqlite-net-pcl": "1.5.231"
@@ -3542,7 +3549,7 @@
       }
     },
     "UAP,Version=v10.0.16299/win10-x86-aot": {
-      "CommonServiceLocator/2.0.2": {
+      "CommonServiceLocator/2.0.4": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
@@ -4084,6 +4091,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CommonServiceLocator": "2.0.4",
           "MvvmLightLibs": "5.4.1.1",
           "Xamarin.Forms": "3.0.0.446417",
           "sqlite-net-pcl": "1.5.231"
@@ -4098,17 +4106,20 @@
     }
   },
   "libraries": {
-    "CommonServiceLocator/2.0.2": {
-      "sha512": "OeAz2cDGiQuaxpJ2pUm1xyZyklT2HgP5LHoumI0o/pcXdTweJMjKHu92JKa33pZRCrRI0DdPcE5MGHk6GCpDMQ==",
+    "CommonServiceLocator/2.0.4": {
+      "sha512": "PUYeC0w+gGG9+T1/sREZaKQAXErlakvhHwEmxMmtIVJeULBB7QdF80IXkVFeu8pz4Nzx81N2zfwk4WaVn3PeXg==",
       "type": "package",
-      "path": "commonservicelocator/2.0.2",
+      "path": "commonservicelocator/2.0.4",
       "files": [
-        "commonservicelocator.2.0.2.nupkg.sha512",
+        ".signature.p7s",
+        "commonservicelocator.2.0.4.nupkg.sha512",
         "commonservicelocator.nuspec",
         "lib/net40/CommonServiceLocator.dll",
         "lib/net45/CommonServiceLocator.dll",
+        "lib/net46/CommonServiceLocator.dll",
         "lib/net47/CommonServiceLocator.dll",
         "lib/netcoreapp1.0/CommonServiceLocator.dll",
+        "lib/netcoreapp2.0/CommonServiceLocator.dll",
         "lib/netstandard1.0/CommonServiceLocator.dll",
         "lib/netstandard2.0/CommonServiceLocator.dll"
       ]
