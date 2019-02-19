@@ -37,7 +37,7 @@ namespace EatSpinApp
 
                 // Configure pages:
                 navigationService.Configure(AppPages.MainPage, typeof(MainPage));
-                navigationService.Configure(AppPages.TestPage, typeof(TestPage));
+                navigationService.Configure(AppPages.RestaurantDatabaseView, typeof(RestaurantDatabaseView));
 
                 // Register NavigationService in IoC container:
                 SimpleIoc.Default.Register<INavigationService>(() => navigationService);

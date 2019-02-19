@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="TestPage.xaml">
+    <EmbeddedResource Update="RestaurantDatabaseView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

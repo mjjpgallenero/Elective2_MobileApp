@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:eatSpinApp="clr-namespace:EatSpinApp;assembly=EatSpinApp"
+             x:Class="EatSpinApp.RestaurantDatabaseView">
+ 
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Enter test entry" Text="{Binding RestaurantNameEntry, Mode=TwoWay}"/>
+            <Button Text="Add Entry" Command="{Binding AddRestaurantCommand}"/>
+            <Button Text="Delete Entry" Command="{Binding DeleteRestaurantCommand}"/>
+            <ListView ItemsSource="{Binding RestaurantList}" SelectedItem="{Binding SelectedRestaurant, Mode=TwoWay}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding RestaurantName}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
