@@ -12,7 +12,7 @@ namespace EatSpinApp
 		public MainPage()
 		{
 			InitializeComponent();
-            
-		}
+            BindingContext = App.Locator.MainPageViewModel;
+        }
 	}
 }

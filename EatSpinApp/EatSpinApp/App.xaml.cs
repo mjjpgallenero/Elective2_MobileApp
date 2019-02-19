@@ -28,13 +28,32 @@ namespace EatSpinApp
 		        db.CreateTable<Restaurant>();
 		    }
 
-		    INavigationService navigationService;
-            navigationService = new NavigationService();
+            INavigationService navigationService;
 
+            if (!SimpleIoc.Default.IsRegistered<INavigationService>())
+            {
+                // Setup navigation service:
+                navigationService = new NavigationService();
 
-            MainPage = new NavigationPage(new MainPage()); 
-            
-		}
+                // Configure pages:
+                navigationService.Configure(AppPages.MainPage, typeof(MainPage));
+                navigationService.Configure(AppPages.TestPage, typeof(TestPage));
+
+                // Register NavigationService in IoC container:
+                SimpleIoc.Default.Register<INavigationService>(() => navigationService);
+            }
+
+            else
+                navigationService = SimpleIoc.Default.GetInstance<INavigationService>();
+
+            // Create new Navigation Page and set MainPage as its default page:
+            var firstPage = new NavigationPage(new MainPage());
+            // Set Navigation page as default page for Navigation Service:
+            navigationService.Initialize(firstPage);
+            // You have to also set MainPage property for the app:
+            MainPage = firstPage;
+
+        }
 	    protected static readonly string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Restaurants.db3");
 
         protected override void OnStart ()

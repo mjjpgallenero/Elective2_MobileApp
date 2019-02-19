@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace EatSpinApp
 {
@@ -7,5 +8,7 @@ namespace EatSpinApp
         void GoBack();
         void NavigateTo(AppPages pageKey);
         void NavigateTo(AppPages pageKey, object parameter);
+        void Configure(AppPages pageKey, Type pageType);
+        void Initialize(NavigationPage navigation);
     }
 }
