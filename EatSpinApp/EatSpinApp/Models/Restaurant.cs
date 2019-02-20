@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using System.Collections.Generic;
 
 namespace EatSpinApp.Models
 {
@@ -8,7 +9,7 @@ namespace EatSpinApp.Models
         [PrimaryKey, AutoIncrement, Column("_restaurantId")]
         public int RestaurantId { get; set; }
         public string RestaurantName { get; set; }
-        public RestaurantType RestaurantType { get; set; }
-        public CuisineType[] CuisineTypes { get; set; }
+        public string RestaurantType { get; set; }
+        public List<string> CuisineTypes { get; set; }
     }
 }
