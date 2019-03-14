@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using EatSpinApp.Models;
 using EatSpinApp.Repository.LocalRepository;
+using EatSpinApp.Views;
 using GalaSoft.MvvmLight.Ioc;
 using SQLite;
 using Xamarin.Forms;
@@ -38,6 +39,7 @@ namespace EatSpinApp
                 // Configure pages:
                 navigationService.Configure(AppPages.MainPage, typeof(MainPage));
                 navigationService.Configure(AppPages.RestaurantDatabaseView, typeof(RestaurantDatabaseView));
+                navigationService.Configure(AppPages.AddNewRestaurantView, typeof(AddNewRestaurantView));
 
                 // Register NavigationService in IoC container:
                 SimpleIoc.Default.Register<INavigationService>(() => navigationService);

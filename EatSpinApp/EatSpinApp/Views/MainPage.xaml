@@ -3,10 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:EatSpinApp"
              x:Class="EatSpinApp.MainPage">
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary"
+                     Text="Settings"
+                     Command="{Binding TestNavigate}">
+            </ToolbarItem>
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <!-- Place new controls here -->
-        <Button Text="Open" Command="{Binding TestNavigate}"/>
         <Label Text="{Binding TestSpinItem}"/>
         <Button Text="Spin" Command="{Binding TestSpin}" VerticalOptions="EndAndExpand"/>
         <Label Text="EatSpin! Alpha" 

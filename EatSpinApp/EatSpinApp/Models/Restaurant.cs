@@ -10,6 +10,6 @@ namespace EatSpinApp.Models
         public int RestaurantId { get; set; }
         public string RestaurantName { get; set; }
         public string RestaurantType { get; set; }
-        public List<string> CuisineTypes { get; set; }
+        public string CuisineType { get; set; }
     }
 }

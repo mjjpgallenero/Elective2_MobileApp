@@ -13,7 +13,6 @@ namespace EatSpinApp
     {
         private IRepository repository;
         private readonly INavigationService _navigationService;
-        private string _restaurantNameEntry;
         private Restaurant _selectedRestaurant;
 
         public RestaurantDatabaseViewModel(INavigationService navigationService)
@@ -26,21 +25,10 @@ namespace EatSpinApp
             }
 
             _navigationService = navigationService;
-            RestaurantNameEntry = null;
             SelectedRestaurant = null;
         }
 
         public ObservableCollection<Restaurant> RestaurantList { get; } = new ObservableCollection<Restaurant>();
-
-        public string RestaurantNameEntry
-        {
-            get { return _restaurantNameEntry; }
-            set
-            {
-                _restaurantNameEntry = value;
-                RaisePropertyChanged(nameof(RestaurantNameEntry));
-            }
-        }
 
         public Restaurant SelectedRestaurant
         {
@@ -51,24 +39,13 @@ namespace EatSpinApp
                 RaisePropertyChanged(nameof(SelectedRestaurant));
             }
         }
+        
+        public ICommand OpenAddNewRestaurantView => new Command(OpenAddNewRestaurantViewProc);
 
-        public ICommand AddRestaurantCommand => new Command(AddRestaurantProc);
-
-        private void AddRestaurantProc()
+        private void OpenAddNewRestaurantViewProc()
         {
-            if (RestaurantNameEntry != null)
-            {
-                RestaurantList.Clear();
-                repository.Restaurant.Add(new Restaurant {RestaurantName = RestaurantNameEntry});
-                var restaurants = repository.Restaurant.GetRange();
-                foreach (var restaurant in restaurants)
-                {
-                    RestaurantList.Add(restaurant);
-                }
-
-                RestaurantNameEntry = null;
-                SelectedRestaurant = null;
-            }
+            _navigationService.NavigateTo(AppPages.AddNewRestaurantView);
+            //RefreshRestaurantList();
         }
 
         public ICommand DeleteRestaurantCommand => new Command(DeleteRestaurantProc);
@@ -85,10 +62,20 @@ namespace EatSpinApp
                     RestaurantList.Add(restaurant);
                 }
 
-                RestaurantNameEntry = null;
                 SelectedRestaurant = null;
             }
-        } 
+        }
+
+        public void RefreshRestaurantList()
+        {
+            RestaurantList.Clear();
+            var restaurants = repository.Restaurant.GetRange();
+            foreach (var restaurant in restaurants)
+            {
+                RestaurantList.Add(restaurant);
+            }
+            SelectedRestaurant = null;
+        }
 
     }
 }

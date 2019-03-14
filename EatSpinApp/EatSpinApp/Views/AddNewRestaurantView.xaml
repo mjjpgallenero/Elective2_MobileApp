@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:eatSpinApp="clr-namespace:EatSpinApp;assembly=EatSpinApp"
+             xmlns:converters="clr-namespace:EatSpinApp.Converters;assembly=EatSpinApp"
+             x:Class="EatSpinApp.Views.AddNewRestaurantView">
+    <!--<ContentPage.BindingContext>
+        <eatSpinApp:NewRestaurantViewModel/>
+    </ContentPage.BindingContext>-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:IntEnumConverter x:Key="IntEnum"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Restaurant Name:"/>
+            <Entry Text="{Binding RestaurantName}" Margin="0,15,0,0"/>
+            <Label Text="Restaurant Type:"/>
+            <Picker ItemsSource="{Binding RestaurantTypes}"
+                    SelectedItem ="{Binding SelectedRestaurantType}"
+                    Margin="0,15,0,0"/>
+            <Label Text="Restaurant Type:"/>
+            <Picker ItemsSource="{Binding CuisineTypes}"
+                    SelectedItem ="{Binding SelectedCuisineType}"
+                    Margin="0,15,0,0"/>
+            <Button Text="Add Restaurant" HorizontalOptions="EndAndExpand"
+                    Command="{Binding AddNewRestaurant}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

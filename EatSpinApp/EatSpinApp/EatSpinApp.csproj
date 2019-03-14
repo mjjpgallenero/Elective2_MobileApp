@@ -12,10 +12,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Icons\" />
     <Folder Include="Repository\OnlineRepository\" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\AddNewRestaurantView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\RestaurantDatabaseView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

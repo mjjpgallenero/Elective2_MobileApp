@@ -10,6 +10,7 @@ namespace EatSpinApp
             ServiceLocator.SetLocatorProvider((() => SimpleIoc.Default));
             SimpleIoc.Default.Register<MainPageViewModel>();
             SimpleIoc.Default.Register<RestaurantDatabaseViewModel>();
+            SimpleIoc.Default.Register<NewRestaurantViewModel>();
         }
 
         public MainPageViewModel MainPageViewModel
@@ -19,6 +20,11 @@ namespace EatSpinApp
         public RestaurantDatabaseViewModel RestaurantDatabaseViewModel
         {
             get { return ServiceLocator.Current.GetInstance<RestaurantDatabaseViewModel>(); }
+        }
+
+        public NewRestaurantViewModel NewRestaurantViewModel
+        {
+            get { return ServiceLocator.Current.GetInstance<NewRestaurantViewModel>(); }
         }
     }
 }
