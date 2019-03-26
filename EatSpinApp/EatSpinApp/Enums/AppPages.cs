@@ -2,6 +2,6 @@
 {
     public enum AppPages
     {
-        MainPage, RestaurantDatabaseView, AddNewRestaurantView
+        MainPage, RestaurantDatabaseView, AddNewRestaurantView, MainNavigationPage
     }
 }

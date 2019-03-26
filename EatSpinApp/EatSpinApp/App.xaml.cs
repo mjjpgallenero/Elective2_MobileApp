@@ -24,10 +24,7 @@ namespace EatSpinApp
         public App ()
 		{
 			InitializeComponent();
-		    using (var db = new SQLiteConnection(dbPath))
-		    {
-		        db.CreateTable<Restaurant>();
-		    }
+		    InitializeApp();
 
             INavigationService navigationService;
 
@@ -40,6 +37,7 @@ namespace EatSpinApp
                 navigationService.Configure(AppPages.MainPage, typeof(MainPage));
                 navigationService.Configure(AppPages.RestaurantDatabaseView, typeof(RestaurantDatabaseView));
                 navigationService.Configure(AppPages.AddNewRestaurantView, typeof(AddNewRestaurantView));
+                navigationService.Configure(AppPages.MainNavigationPage, typeof(MainNavigationPage));
 
                 // Register NavigationService in IoC container:
                 SimpleIoc.Default.Register<INavigationService>(() => navigationService);
@@ -49,14 +47,29 @@ namespace EatSpinApp
                 navigationService = SimpleIoc.Default.GetInstance<INavigationService>();
 
             // Create new Navigation Page and set MainPage as its default page:
-            var firstPage = new NavigationPage(new MainPage());
-            // Set Navigation page as default page for Navigation Service:
+
+            var firstPage = new NavigationPage(new MainNavigationPage());
             navigationService.Initialize(firstPage);
-            // You have to also set MainPage property for the app:
             MainPage = firstPage;
 
         }
 	    protected static readonly string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Restaurants.db3");
+
+        private void InitializeApp()
+        {
+            using (var db = new SQLiteConnection(dbPath))
+            {
+                db.CreateTable<Restaurant>();
+                var restaurants = db.Table<Restaurant>();
+                var restaurantList = restaurants.ToList();
+
+                if (restaurantList.Count == 0)
+                {
+                    var repo = new LocalRepository();
+                    repo.Restaurant.Add(new Restaurant{RestaurantName = "Test2", RestaurantType = "Fine Dining", CuisineType = "Japanese", ContactNumber = "1234"});
+                }
+            }
+        }
 
         protected override void OnStart ()
 		{
