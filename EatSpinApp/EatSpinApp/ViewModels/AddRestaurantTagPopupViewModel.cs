@@ -20,6 +20,7 @@ namespace EatSpinApp
         private readonly INavigationService _navigationService;
         private string _selectedRestaurantTag;
         private SetRestaurantFiltersViewModel _setRestaurantFiltersViewModel;
+        private string _selectedRestaurantLocation;
 
         public AddRestaurantTagPopupViewModel(INavigationService navigationService, SetRestaurantFiltersViewModel setRestaurantFiltersViewModel)
         {
@@ -38,20 +39,33 @@ namespace EatSpinApp
             }
         }
 
+        public string SelectedRestaurantLocation
+        {
+            get { return _selectedRestaurantLocation; }
+            set
+            {
+                _selectedRestaurantLocation = value;
+                RaisePropertyChanged(nameof(SelectedRestaurantLocation));
+            }
+        }
+
         public string[] RestaurantTags { get; } = Enum.GetNames(typeof(RestaurantTags)).Select(c => c.SplitCamelCase()).ToArray();
+        public string[] RestaurantLocations { get; } = Enum.GetNames(typeof(Locations)).Select(c => c.SplitCamelCase()).ToArray();
 
         public ICommand AddRestaurantTagCommand => new Command(AddRestaurantTagProc);
 
         private void AddRestaurantTagProc()
         {
-            if (SelectedRestaurantTag == null)
+            if (SelectedRestaurantTag == null && SelectedRestaurantLocation == null)
             {
-                Application.Current.MainPage.DisplayAlert("Error", "Please select a tag.", "Ok");
+                Application.Current.MainPage.DisplayAlert("Error", "Please select at least one field.", "Ok");
             }
             else
             {
-                _setRestaurantFiltersViewModel.RestaurantTags.Add(SelectedRestaurantTag);
-                //_setRestaurantFiltersViewModel.RefreshRestaurantList();
+                if (SelectedRestaurantTag != null) _setRestaurantFiltersViewModel.RestaurantTags.Add(SelectedRestaurantTag);
+                if (SelectedRestaurantLocation != null) _setRestaurantFiltersViewModel.RestaurantLocations.Add(SelectedRestaurantLocation);
+                SelectedRestaurantTag = null;
+                SelectedRestaurantLocation = null;
                 PopupNavigation.Instance.PopAsync();
             }
         }

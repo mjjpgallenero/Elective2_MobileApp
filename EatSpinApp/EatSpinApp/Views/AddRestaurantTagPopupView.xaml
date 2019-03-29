@@ -22,7 +22,11 @@
         <Picker ItemsSource="{Binding RestaurantTags}"
                 SelectedItem ="{Binding SelectedRestaurantTag}"
                 Margin="0,15,0,0"/>
-        <Button Text="Add Restaurant" HorizontalOptions="EndAndExpand"
+        <Label Text="Restaurant Locations: "/>
+        <Picker ItemsSource="{Binding RestaurantLocations}"
+                SelectedItem ="{Binding SelectedRestaurantLocation}"
+                Margin="0,15,0,0"/>
+        <Button Text="Add Tag" HorizontalOptions="EndAndExpand"
                 Command="{Binding AddRestaurantTagCommand}"/>
     </StackLayout>
 </pages:PopupPage>

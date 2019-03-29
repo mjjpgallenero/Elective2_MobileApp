@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -21,40 +22,59 @@ namespace EatSpinApp
     {
         private readonly INavigationService _navigationService;
         private IRepository repository;
-        private string _testSpinItem;
+        private Restaurant _randomizedRestaurant;
+
         static Random random = new Random();
+
         public MainPageViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
             repository = new LocalRepository();
+            foreach (var restaurant in repository.Restaurant.GetRange())
+            {
+                RestaurantList.Add(restaurant);
+            }
         }
 
-        public string TestSpinItem
+        public Restaurant RandomizedRestaurant
         {
-            get { return _testSpinItem; }
+            get { return _randomizedRestaurant; }
             set
             {
-                _testSpinItem = value;
-                RaisePropertyChanged(nameof(TestSpinItem));
+                _randomizedRestaurant = value;
+                RaisePropertyChanged(nameof(RandomizedRestaurant));
             }
         }
 
-        public ICommand TestSpin => new Command(TestSpinProc);
+        public ObservableCollection<Restaurant> RestaurantList { get; } = new ObservableCollection<Restaurant>();
 
-        private void TestSpinProc()
+        public ICommand SpinCommand => new Command(SpinProc);
+
+        private void SpinProc()
         {
-            var restaurants = repository.Restaurant.GetRange();
-            if (restaurants.Count > 0)
+            if (RestaurantList.Count > 0)
             {
-                int r = random.Next(restaurants.Count);
-                TestSpinItem = restaurants[r].RestaurantName;
+                int r = random.Next(RestaurantList.Count);
+                RandomizedRestaurant = RestaurantList[r];
             }
         }
 
-        public ICommand TestNavigate => new Command(TestNavigateCommand);
-        private void TestNavigateCommand()
+        public ICommand NavigateToSettingsCommand => new Command(NavigateToSettingsProc);
+
+        private void NavigateToSettingsProc()
         {
             _navigationService.NavigateTo(AppPages.SetRestaurantFiltersView);
+        }
+
+        public void RefreshRestaurantList()
+        {
+            RestaurantList.Clear();
+            var restaurants = repository.Restaurant.GetRange();
+            foreach (var restaurant in restaurants)
+            {
+                RestaurantList.Add(restaurant);
+            }
+            RandomizedRestaurant = null;
         }
     }
 }

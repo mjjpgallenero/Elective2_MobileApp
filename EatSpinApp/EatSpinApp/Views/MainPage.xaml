@@ -3,16 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:EatSpinApp"
              x:Class="EatSpinApp.MainPage">
+
+    <!--<ContentPage.BindingContext>
+        <local:MainPageViewModel></local:MainPageViewModel>
+    </ContentPage.BindingContext>-->
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Order="Primary"
                      Text="Settings"
-                     Command="{Binding TestNavigate}">
+                     Command="{Binding NavigateToSettingsCommand}">
             </ToolbarItem>
     </ContentPage.ToolbarItems>
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="{Binding TestSpinItem}"/>
-        <Button Text="Spin" Command="{Binding TestSpin}" VerticalOptions="EndAndExpand"/>
+        <StackLayout Padding="3">
+            <Label Text="{Binding RandomizedRestaurant.RestaurantName}"
+                   FontAttributes="Bold"/>
+            <Label Text="{Binding RandomizedRestaurant.Address}"/>
+            <Label Text="{Binding RandomizedRestaurant.ContactNumber}"/>
+        </StackLayout>
+        <Button Text="Spin" Command="{Binding SpinCommand}" VerticalOptions="EndAndExpand"/>
         <Label Text="EatSpin! Alpha" 
            HorizontalOptions="Center"
            VerticalOptions="EndAndExpand" />
