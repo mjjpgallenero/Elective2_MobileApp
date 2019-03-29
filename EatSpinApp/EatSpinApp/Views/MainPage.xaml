@@ -14,19 +14,41 @@
                      Command="{Binding NavigateToSettingsCommand}">
             </ToolbarItem>
     </ContentPage.ToolbarItems>
-    <StackLayout>
-        <!-- Place new controls here -->
-        <StackLayout Padding="3">
-            <Label Text="{Binding RandomizedRestaurant.RestaurantName}"
-                   FontAttributes="Bold"/>
-            <Label Text="{Binding RandomizedRestaurant.Address}"/>
-            <Label Text="{Binding RandomizedRestaurant.ContactNumber}"/>
-        </StackLayout>
-        <Button Text="Spin" Command="{Binding SpinCommand}" VerticalOptions="EndAndExpand"/>
-        <Label Text="EatSpin! Alpha" 
-           HorizontalOptions="Center"
-           VerticalOptions="EndAndExpand" />
-    </StackLayout>
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+             <!-- Place new controls here -->
+             <StackLayout Padding="10"
+                          Grid.Row="0"
+                          Margin="10,10,0,0">
+                 <Label Text="{Binding RandomizedRestaurant.RestaurantName}"
+                        FontAttributes="Bold"
+                        FontSize="Large"/>
+                 <Label Text="{Binding RandomizedRestaurant.Address}"
+                        FontSize="Medium"/>
+                 <Label Text="{Binding RandomizedRestaurant.ContactNumber}"
+                        FontSize="Medium"/>
+             </StackLayout>
+             <StackLayout Grid.Row="1">
+                <Button Text="Spin" 
+                        Command="{Binding SpinCommand}" 
+                        VerticalOptions="EndAndExpand"/>
+
+                <Label Text="EatSpin! Alpha" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="EndAndExpand" />
+             </StackLayout>
+             
+        </Grid>
+
+    </ContentPage.Content>
+    
+    
     
 
 

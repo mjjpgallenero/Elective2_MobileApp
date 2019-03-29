@@ -6,7 +6,7 @@
              >
   <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
-        <eatSpinApp:MainPage/>
-        <ContentPage/>
+        <eatSpinApp:MainPage Title="SPIN!"/>
+        <ContentPage Title="Your History"/>
     </TabbedPage.Children>
 </TabbedPage>
