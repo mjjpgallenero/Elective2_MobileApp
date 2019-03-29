@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "832bafe712bfd4553d8e7fbe41ebc44dd8b0d483"
+    "signature": "3e7a51d70ae5c63717ee43c7cd3b84cca974b96b"
   },
   "compilationOptions": {},
   "targets": {
@@ -12,6 +12,7 @@
           "CommonServiceLocator": "2.0.4",
           "MvvmLightLibs": "5.4.1.1",
           "NETStandard.Library": "2.0.3",
+          "Rg.Plugins.Popup": "1.1.5.188",
           "Xamarin.Forms": "3.0.0.446417",
           "sqlite-net-pcl": "1.5.231"
         },
@@ -36,6 +37,14 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Rg.Plugins.Popup/1.1.5.188": {
+        "dependencies": {
+          "Xamarin.Forms": "3.0.0.446417"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Rg.Plugins.Popup.dll": {}
         }
       },
       "sqlite-net-pcl/1.5.231": {
@@ -107,6 +116,13 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Rg.Plugins.Popup/1.1.5.188": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PE7uHJ/LuI5pSO1HpgjJ+v2KhNfftzqt/L1AoGH/5mX0fP7pcW6lG4FbUHuCFKolrzJfLLotuuET+hfN50Whpg==",
+      "path": "rg.plugins.popup/1.1.5.188",
+      "hashPath": "rg.plugins.popup.1.1.5.188.nupkg.sha512"
     },
     "sqlite-net-pcl/1.5.231": {
       "type": "package",

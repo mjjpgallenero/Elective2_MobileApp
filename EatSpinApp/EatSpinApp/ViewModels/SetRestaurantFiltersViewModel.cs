@@ -4,7 +4,9 @@ using EatSpinApp.Enums;
 using EatSpinApp.Models;
 using EatSpinApp.Repository;
 using EatSpinApp.Repository.LocalRepository;
+using EatSpinApp.Views;
 using GalaSoft.MvvmLight;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 
 namespace EatSpinApp.ViewModels
@@ -13,30 +15,23 @@ namespace EatSpinApp.ViewModels
     {
         private IRepository repository;
         private readonly INavigationService _navigationService;
-        private Restaurant _selectedRestaurant;
+        private string _selectedRestaurantTag;
 
         public SetRestaurantFiltersViewModel(INavigationService navigationService)
         {
-            repository = new LocalRepository();
-            var restaurants = repository.Restaurant.GetRange();
-            foreach (var restaurant in restaurants)
-            {
-                RestaurantList.Add(restaurant);
-            }
-
             _navigationService = navigationService;
-            SelectedRestaurant = null;
+            SelectedRestaurantTag = null;
         }
 
-        public ObservableCollection<Restaurant> RestaurantList { get; } = new ObservableCollection<Restaurant>();
+        public ObservableCollection<string> RestaurantTags { get; } = new ObservableCollection<string>();
 
-        public Restaurant SelectedRestaurant
+        public string SelectedRestaurantTag
         {
-            get { return _selectedRestaurant; }
+            get { return _selectedRestaurantTag; }
             set
             {
-                _selectedRestaurant = value; 
-                RaisePropertyChanged(nameof(SelectedRestaurant));
+                _selectedRestaurantTag = value; 
+                RaisePropertyChanged(nameof(SelectedRestaurantTag));
             }
         }
         
@@ -44,7 +39,8 @@ namespace EatSpinApp.ViewModels
 
         private void OpenAddNewRestaurantViewProc()
         {
-            _navigationService.NavigateTo(AppPages.AddNewRestaurantView);
+            PopupNavigation.Instance.PushAsync(new AddRestaurantTagPopupView());
+            //_navigationService.NavigateTo(AppPages.AddNewRestaurantFilterView);
             //RefreshRestaurantList();
         }
 
@@ -52,30 +48,23 @@ namespace EatSpinApp.ViewModels
 
         private void DeleteRestaurantProc()
         {
-            if (SelectedRestaurant != null)
-            { 
-                repository.Restaurant.Delete(SelectedRestaurant);
-                RestaurantList.Clear();
-                var restaurants = repository.Restaurant.GetRange();
-                foreach (var restaurant in restaurants)
-                {
-                    RestaurantList.Add(restaurant);
-                }
-
-                SelectedRestaurant = null;
-            }
-        }
-
-        public void RefreshRestaurantList()
-        {
-            RestaurantList.Clear();
-            var restaurants = repository.Restaurant.GetRange();
-            foreach (var restaurant in restaurants)
+            if (SelectedRestaurantTag != null)
             {
-                RestaurantList.Add(restaurant);
+                RestaurantTags.Remove(SelectedRestaurantTag);
+                SelectedRestaurantTag = null;
             }
-            SelectedRestaurant = null;
         }
+
+        //public void RefreshRestaurantList()
+        //{
+        //    RestaurantList.Clear();
+        //    var restaurants = repository.Restaurant.GetRange();
+        //    foreach (var restaurant in restaurants)
+        //    {
+        //        RestaurantList.Add(restaurant);
+        //    }
+        //    SelectedRestaurant = null;
+        //}
 
     }
 }

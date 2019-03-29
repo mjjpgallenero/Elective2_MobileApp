@@ -11,7 +11,7 @@ namespace EatSpinApp
             ServiceLocator.SetLocatorProvider((() => SimpleIoc.Default));
             SimpleIoc.Default.Register<MainPageViewModel>();
             SimpleIoc.Default.Register<SetRestaurantFiltersViewModel>();
-            SimpleIoc.Default.Register<NewRestaurantViewModel>();
+            SimpleIoc.Default.Register<AddRestaurantTagPopupViewModel>();
         }
 
         public MainPageViewModel MainPageViewModel
@@ -23,9 +23,9 @@ namespace EatSpinApp
             get { return ServiceLocator.Current.GetInstance<SetRestaurantFiltersViewModel>(); }
         }
 
-        public NewRestaurantViewModel NewRestaurantViewModel
+        public AddRestaurantTagPopupViewModel AddRestaurantTagPopupViewModel
         {
-            get { return ServiceLocator.Current.GetInstance<NewRestaurantViewModel>(); }
+            get { return ServiceLocator.Current.GetInstance<AddRestaurantTagPopupViewModel>(); }
         }
     }
 }

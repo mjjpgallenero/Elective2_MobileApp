@@ -37,7 +37,7 @@ namespace EatSpinApp
                 // Configure pages:
                 navigationService.Configure(AppPages.MainPage, typeof(MainPage));
                 navigationService.Configure(AppPages.SetRestaurantFiltersView, typeof(SetRestaurantFiltersView));
-                navigationService.Configure(AppPages.AddNewRestaurantView, typeof(AddNewRestaurantView));
+                navigationService.Configure(AppPages.AddNewRestaurantFilterView, typeof(AddNewRestaurantFilterView));
                 navigationService.Configure(AppPages.MainNavigationPage, typeof(MainNavigationPage));
 
                 // Register NavigationService in IoC container:

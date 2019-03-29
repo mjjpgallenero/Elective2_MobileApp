@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EatSpinApp.Views.AddRestaurantTagPopupView"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:eatSpinApp="clr-namespace:EatSpinApp;assembly=EatSpinApp"
+             xmlns:converters="clr-namespace:EatSpinApp.Converters;assembly=EatSpinApp">
+
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <converters:IntEnumConverter x:Key="IntEnum"/>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+
+    <StackLayout Margin="12"
+               Padding="24"
+               Spacing="24"
+               BackgroundColor="White"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+        <Label Text="Restaurant Tags:"/>
+        <Picker ItemsSource="{Binding RestaurantTags}"
+                SelectedItem ="{Binding SelectedRestaurantTag}"
+                Margin="0,15,0,0"/>
+        <Button Text="Add Restaurant" HorizontalOptions="EndAndExpand"
+                Command="{Binding AddRestaurantTagCommand}"/>
+    </StackLayout>
+</pages:PopupPage>
