@@ -1,4 +1,5 @@
 ﻿using CommonServiceLocator;
+using EatSpinApp.ViewModels;
 using GalaSoft.MvvmLight.Ioc;
 
 namespace EatSpinApp
@@ -9,7 +10,7 @@ namespace EatSpinApp
         {
             ServiceLocator.SetLocatorProvider((() => SimpleIoc.Default));
             SimpleIoc.Default.Register<MainPageViewModel>();
-            SimpleIoc.Default.Register<RestaurantDatabaseViewModel>();
+            SimpleIoc.Default.Register<SetRestaurantFiltersViewModel>();
             SimpleIoc.Default.Register<NewRestaurantViewModel>();
         }
 
@@ -17,9 +18,9 @@ namespace EatSpinApp
         {
             get { return ServiceLocator.Current.GetInstance<MainPageViewModel>(); }
         }
-        public RestaurantDatabaseViewModel RestaurantDatabaseViewModel
+        public SetRestaurantFiltersViewModel SetRestaurantFiltersViewModel
         {
-            get { return ServiceLocator.Current.GetInstance<RestaurantDatabaseViewModel>(); }
+            get { return ServiceLocator.Current.GetInstance<SetRestaurantFiltersViewModel>(); }
         }
 
         public NewRestaurantViewModel NewRestaurantViewModel

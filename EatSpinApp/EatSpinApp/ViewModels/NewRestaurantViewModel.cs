@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
 using EatSpinApp.Converters;
+using EatSpinApp.Enums;
 using EatSpinApp.Models;
 using EatSpinApp.Repository;
 using EatSpinApp.Repository.LocalRepository;
+using EatSpinApp.ViewModels;
 using GalaSoft.MvvmLight;
 using Xamarin.Forms;
 
@@ -18,13 +20,13 @@ namespace EatSpinApp
         private string _restaurantName;
         private string _selectedRestaurantType;
         private string _selectedCuisineType;
-        private RestaurantDatabaseViewModel _restaurantDatabaseViewModel;
+        private SetRestaurantFiltersViewModel _setRestaurantFiltersViewModel;
 
-        public NewRestaurantViewModel(INavigationService navigationService, RestaurantDatabaseViewModel restaurantDatabaseViewModel)
+        public NewRestaurantViewModel(INavigationService navigationService, SetRestaurantFiltersViewModel setRestaurantFiltersViewModel)
         {
             repository = new LocalRepository();
             _navigationService = navigationService;
-            _restaurantDatabaseViewModel = restaurantDatabaseViewModel;
+            _setRestaurantFiltersViewModel = setRestaurantFiltersViewModel;
         }
 
         public string RestaurantName
@@ -47,7 +49,7 @@ namespace EatSpinApp
             }
         }
 
-        public string[] RestaurantTypes { get; } = Enum.GetNames(typeof(RestaurantType)).Select(c => c.SplitCamelCase()).ToArray();
+        public string[] RestaurantTypes { get; } = Enum.GetNames(typeof(RestaurantTags)).Select(c => c.SplitCamelCase()).ToArray();
 
         public string SelectedCuisineType
         {
@@ -59,25 +61,25 @@ namespace EatSpinApp
             }
         }
 
-        public string[] CuisineTypes { get; } = Enum.GetNames(typeof(CuisineType)).Select(c => c.SplitCamelCase()).ToArray();
-        public ICommand AddNewRestaurant => new Command(AddNewRestaurantProc);
+        //public string[] CuisineTypes { get; } = Enum.GetNames(typeof(CuisineType)).Select(c => c.SplitCamelCase()).ToArray();
+        //public ICommand AddNewRestaurant => new Command(AddNewRestaurantProc);
 
-        private void AddNewRestaurantProc()
-        {
-            if (RestaurantName == null || SelectedRestaurantType == null || SelectedCuisineType == null)
-            {
-                Application.Current.MainPage.DisplayAlert("Error", "One or more fields is/are missing.", "Ok");
-            }
-            else
-            {
-                var newRestaurant = new Restaurant();
-                newRestaurant.RestaurantName = RestaurantName;
-                newRestaurant.RestaurantType = SelectedRestaurantType;
-                newRestaurant.CuisineType = SelectedCuisineType;
-                repository.Restaurant.Add(newRestaurant);
-                _restaurantDatabaseViewModel.RefreshRestaurantList();
-                _navigationService.GoBack();
-            }
-        }
+        //private void AddNewRestaurantProc()
+        //{
+        //    if (RestaurantName == null || SelectedRestaurantType == null || SelectedCuisineType == null)
+        //    {
+        //        Application.Current.MainPage.DisplayAlert("Error", "One or more fields is/are missing.", "Ok");
+        //    }
+        //    else
+        //    {
+        //        var newRestaurant = new Restaurant();
+        //        newRestaurant.RestaurantName = RestaurantName;
+        //        newRestaurant.RestaurantType = SelectedRestaurantType;
+        //        newRestaurant.CuisineType = SelectedCuisineType;
+        //        repository.Restaurant.Add(newRestaurant);
+        //        _setRestaurantFiltersViewModel.RefreshRestaurantList();
+        //        _navigationService.GoBack();
+        //    }
+        //}
     }
 }

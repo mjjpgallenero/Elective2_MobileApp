@@ -1,7 +1,7 @@
-﻿namespace EatSpinApp
+﻿namespace EatSpinApp.Enums
 {
     public enum AppPages
     {
-        MainPage, RestaurantDatabaseView, AddNewRestaurantView, MainNavigationPage
+        MainPage, SetRestaurantFiltersView, AddNewRestaurantView, MainNavigationPage
     }
 }

@@ -35,7 +35,7 @@
           "lib/net45/System.Windows.Interactivity.dll": {}
         }
       },
-      "NETStandard.Library/2.0.1": {
+      "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -111,10 +111,11 @@
   },
   "libraries": {
     "CommonServiceLocator/2.0.4": {
-      "sha512": "PUYeC0w+gGG9+T1/sREZaKQAXErlakvhHwEmxMmtIVJeULBB7QdF80IXkVFeu8pz4Nzx81N2zfwk4WaVn3PeXg==",
+      "sha512": "YpXfV5l6kv1iQRDfhQnN4RxocbnNehU/rAAS62IlaQUTAKN3WoUbtx9MHwE98Pb09mBemSs4xhVqFhXq27rjxw==",
       "type": "package",
       "path": "commonservicelocator/2.0.4",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "commonservicelocator.2.0.4.nupkg.sha512",
         "commonservicelocator.nuspec",
@@ -142,11 +143,14 @@
       ]
     },
     "MvvmLightLibs/5.4.1.1": {
-      "sha512": "3VCzGx0spwiuOIUR5vx0ysdnIPEKhAf3+j8tjoUVP1d69WiVWtTc7aBNt1DTsF4afGWjoSxSeq5Ulguk+PESgA==",
+      "sha512": "xYpVzOYnIz/M6T0pdc3w5t0vrt2ZKspSS+CZjQ+pZE+5yHv9qXSWkncHJXb6D7Egstalso4ivnIUkA1xEClViw==",
       "type": "package",
       "path": "mvvmlightlibs/5.4.1.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
+        "MvvmLightLibs.5.4.1.1.nupkg.sha512",
+        "MvvmLightLibs.nuspec",
         "lib/SL5/GalaSoft.MvvmLight.Extras.dll",
         "lib/SL5/GalaSoft.MvvmLight.Extras.pdb",
         "lib/SL5/GalaSoft.MvvmLight.Extras.xml",
@@ -156,12 +160,15 @@
         "lib/SL5/System.Windows.Interactivity.dll",
         "lib/monoandroid1/GalaSoft.MvvmLight.Extras.XML",
         "lib/monoandroid1/GalaSoft.MvvmLight.Extras.dll",
+        "lib/monoandroid1/GalaSoft.MvvmLight.Extras.dll.mdb",
         "lib/monoandroid1/GalaSoft.MvvmLight.Extras.pdb",
         "lib/monoandroid1/GalaSoft.MvvmLight.Platform.XML",
         "lib/monoandroid1/GalaSoft.MvvmLight.Platform.dll",
+        "lib/monoandroid1/GalaSoft.MvvmLight.Platform.dll.mdb",
         "lib/monoandroid1/GalaSoft.MvvmLight.Platform.pdb",
         "lib/monoandroid1/GalaSoft.MvvmLight.XML",
         "lib/monoandroid1/GalaSoft.MvvmLight.dll",
+        "lib/monoandroid1/GalaSoft.MvvmLight.dll.mdb",
         "lib/monoandroid1/GalaSoft.MvvmLight.pdb",
         "lib/net35/GalaSoft.MvvmLight.Extras.dll",
         "lib/net35/GalaSoft.MvvmLight.Extras.pdb",
@@ -252,19 +259,18 @@
         "lib/xamarin.ios10/GalaSoft.MvvmLight.Platform.dll",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.XML",
         "lib/xamarin.ios10/GalaSoft.MvvmLight.dll",
-        "lib/xamarin.ios10/GalaSoft.MvvmLight.pdb",
-        "mvvmlightlibs.5.4.1.1.nupkg.sha512",
-        "mvvmlightlibs.nuspec"
+        "lib/xamarin.ios10/GalaSoft.MvvmLight.pdb"
       ]
     },
-    "NETStandard.Library/2.0.1": {
-      "sha512": "oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
+    "NETStandard.Library/2.0.3": {
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
-      "path": "netstandard.library/2.0.1",
+      "path": "netstandard.library/2.0.3",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "build/NETStandard.Library.targets",
         "build/netstandard2.0/NETStandard.Library.targets",
         "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
         "build/netstandard2.0/ref/System.AppContext.dll",
@@ -381,15 +387,16 @@
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.1.nupkg.sha512",
+        "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
     },
     "sqlite-net-pcl/1.5.231": {
-      "sha512": "Sy+K+Wm2RZ+4b1uLHsaXvfR92Or71XxPXa2Id6msSOVkZKh+c+PUk/HQOAgxyhm3lhvysL0mK6Gd6mI69NJ9AA==",
+      "sha512": "B9jScvqkishSMkpa9Mc4Q85LTHxRTzcUXZx9EQqgrvdz7MFEDHfpiPcKdjy1qXHdmHttEXfY4h6gu4FlgWP2Sw==",
       "type": "package",
       "path": "sqlite-net-pcl/1.5.231",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard1.1/SQLite-net.deps.json",
         "lib/netstandard1.1/SQLite-net.dll",
@@ -401,10 +408,11 @@
       ]
     },
     "SQLitePCLRaw.bundle_green/1.1.11": {
-      "sha512": "HOD1/Jg9VZtrOyPUCD9reQOXHq4r+fNe24qw5nghuiUcKch+9jePeRpt6MqGGUFhg2KW89KvE/RFlhpbfF8pKA==",
+      "sha512": "Hqp8IF/RLjbypkLm+t+1RqAX8EKuWEkj7wkLXplfENQoPnE127cvTmaDvaQKtt7a5QsD/HNjFDr1z5f9q2wdPg==",
       "type": "package",
       "path": "sqlitepclraw.bundle_green/1.1.11",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "build/wp8/SQLitePCLRaw.bundle_green.targets",
         "build/wp80/arm/SQLitePCLRaw.batteries_green.dll",
@@ -447,10 +455,11 @@
       ]
     },
     "SQLitePCLRaw.core/1.1.11": {
-      "sha512": "bWiOso10I1vDuc5rbzT69LQT0+oXfYnoqx8vKJ8zim/CJ4ytSd20QNTE/FE0dvWEgXGnvDp7gGJFu6PeWnhx9g==",
+      "sha512": "QT17CyQAQIbTCu6pW5+uVA8BXqRzquiDI1tr5Un6c1YZcQydPmGPuYYng9xMs2UHUDYHbTu+JDkp55WR+qo9bQ==",
       "type": "package",
       "path": "sqlitepclraw.core/1.1.11",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/MonoAndroid/SQLitePCLRaw.core.dll",
         "lib/Xamarin.Mac20/SQLitePCLRaw.core.dll",
@@ -472,10 +481,11 @@
       ]
     },
     "Xamarin.Forms/3.0.0.446417": {
-      "sha512": "z820kN6J6VP927/I1MOyDT+LIL9y6k79R/BpKyPUeQD62f/FB2L37OCf4fK9MqKSXfJdRgw6z+J70FveTJcBiA==",
+      "sha512": "9Q6dING0FdSiOlsWUdNUzNiZgEljZ7rez5rn3+77+h0hfaFjSyV0tZQ1y2u2pXzRqgWNjDH3rrcCSoKgkMIxzA==",
       "type": "package",
       "path": "xamarin.forms/3.0.0.446417",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "build/netstandard1.0/Mono.Cecil.Mdb.dll",
         "build/netstandard1.0/Mono.Cecil.Pdb.dll",
@@ -616,29 +626,29 @@
     ".NETStandard,Version=v2.0": [
       "CommonServiceLocator >= 2.0.4",
       "MvvmLightLibs >= 5.4.1.1",
-      "NETStandard.Library >= 2.0.1",
+      "NETStandard.Library >= 2.0.3",
       "Xamarin.Forms >= 3.0.0.446417",
       "sqlite-net-pcl >= 1.5.231"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vinson\\.nuget\\packages\\": {},
+    "C:\\Users\\2noob4you\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vinson\\Desktop\\EatSpin Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\EatSpinApp.csproj",
+      "projectUniqueName": "E:\\Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\EatSpinApp.csproj",
       "projectName": "EatSpinApp",
-      "projectPath": "C:\\Users\\Vinson\\Desktop\\EatSpin Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\EatSpinApp.csproj",
-      "packagesPath": "C:\\Users\\Vinson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vinson\\Desktop\\EatSpin Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\obj\\",
+      "projectPath": "E:\\Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\EatSpinApp.csproj",
+      "packagesPath": "C:\\Users\\2noob4you\\.nuget\\packages\\",
+      "outputPath": "E:\\Github\\Elective2_MobileApp\\EatSpinApp\\EatSpinApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Vinson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\2noob4you\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -646,7 +656,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://www.nuget.org/api/v2/": {}
       },
       "frameworks": {
         "netstandard2.0": {
@@ -673,7 +683,7 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.1, )",
+            "version": "[2.0.3, )",
             "autoReferenced": true
           },
           "Xamarin.Forms": {

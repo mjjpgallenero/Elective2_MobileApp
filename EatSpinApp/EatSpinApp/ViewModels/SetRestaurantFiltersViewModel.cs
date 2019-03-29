@@ -1,21 +1,21 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
+using EatSpinApp.Enums;
 using EatSpinApp.Models;
 using EatSpinApp.Repository;
 using EatSpinApp.Repository.LocalRepository;
 using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
 using Xamarin.Forms;
 
-namespace EatSpinApp
+namespace EatSpinApp.ViewModels
 {
-    public class RestaurantDatabaseViewModel : ObservableObject
+    public class SetRestaurantFiltersViewModel : ObservableObject
     {
         private IRepository repository;
         private readonly INavigationService _navigationService;
         private Restaurant _selectedRestaurant;
 
-        public RestaurantDatabaseViewModel(INavigationService navigationService)
+        public SetRestaurantFiltersViewModel(INavigationService navigationService)
         {
             repository = new LocalRepository();
             var restaurants = repository.Restaurant.GetRange();

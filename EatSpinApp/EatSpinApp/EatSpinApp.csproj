@@ -23,7 +23,7 @@
     <EmbeddedResource Update="Views\MainNavigationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\RestaurantDatabaseView.xaml">
+    <EmbeddedResource Update="Views\SetRestaurantFiltersView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

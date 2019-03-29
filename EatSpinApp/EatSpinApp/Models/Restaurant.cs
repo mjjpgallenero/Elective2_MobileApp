@@ -9,9 +9,10 @@ namespace EatSpinApp.Models
         [PrimaryKey, AutoIncrement, Column("RestaurantId")]
         public int RestaurantId { get; set; }
         public string RestaurantName { get; set; }
-        public string RestaurantType { get; set; }
-        public string CuisineType { get; set; }
+        public string RestaurantTag { get; set; }
         public string ContactNumber { get; set; }
+        public string Location { get; set; }
+        public string Address { get; set; }
 
     }
 }

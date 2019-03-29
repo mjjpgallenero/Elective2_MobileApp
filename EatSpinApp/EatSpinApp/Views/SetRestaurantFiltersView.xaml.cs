@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace EatSpinApp
+namespace EatSpinApp.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RestaurantDatabaseView : ContentPage
+	public partial class SetRestaurantFiltersView : ContentPage
 	{
-		public RestaurantDatabaseView ()
+		public SetRestaurantFiltersView ()
 		{
 			InitializeComponent ();
-            BindingContext = App.Locator.RestaurantDatabaseViewModel;
+            this.BindingContext = App.Locator.SetRestaurantFiltersViewModel;
         }
 	}
 }

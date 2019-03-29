@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:eatSpinApp="clr-namespace:EatSpinApp;assembly=EatSpinApp"
-             x:Class="EatSpinApp.RestaurantDatabaseView">
- <ContentPage.ToolbarItems>
+             x:Class="EatSpinApp.Views.SetRestaurantFiltersView">
+    <ContentPage.ToolbarItems>
         <ToolbarItem Text="Apply Filters"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
@@ -11,7 +10,7 @@
             <ListView ItemsSource="{Binding RestaurantList, Mode=TwoWay}" 
                       SelectedItem="{Binding SelectedRestaurant, Mode=TwoWay}" 
                       HasUnevenRows="True" 
-                      >
+            >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -24,6 +23,6 @@
             </ListView>
             <Button Text="Delete Entry" Command="{Binding DeleteRestaurantCommand}"/>
             <Button Text="Add Entry" Command="{Binding OpenAddNewRestaurantView}"/>
-            </StackLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

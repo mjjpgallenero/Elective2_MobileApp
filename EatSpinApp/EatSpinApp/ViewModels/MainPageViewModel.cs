@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using EatSpinApp.Annotations;
+using EatSpinApp.Enums;
 using EatSpinApp.Models;
 using EatSpinApp.Repository;
 using EatSpinApp.Repository.LocalRepository;
@@ -53,7 +54,7 @@ namespace EatSpinApp
         public ICommand TestNavigate => new Command(TestNavigateCommand);
         private void TestNavigateCommand()
         {
-            _navigationService.NavigateTo(AppPages.RestaurantDatabaseView);
+            _navigationService.NavigateTo(AppPages.SetRestaurantFiltersView);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using EatSpinApp.Enums;
 using Xamarin.Forms;
 
 namespace EatSpinApp

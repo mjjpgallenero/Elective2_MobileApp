@@ -16,3 +16,12 @@ C:\Users\Vinson\Desktop\EatSpin Github\Elective2_MobileApp\EatSpinApp\EatSpinApp
 C:\Users\Vinson\Desktop\EatSpin Github\Elective2_MobileApp\EatSpinApp\EatSpinApp\obj\Debug\netstandard2.0\EatSpinApp.pdb
 C:\Users\mjjpgallenero\Documents\GitHub\Elective2_MobileApp\EatSpinApp\EatSpinApp\obj\Debug\netstandard2.0\EatSpinApp.csprojAssemblyReference.cache
 C:\Users\Vinson\Desktop\EatSpin Github\Elective2_MobileApp\EatSpinApp\EatSpinApp\obj\Debug\netstandard2.0\EatSpinApp.csprojResolveAssemblyReference.cache
+E:\Github\Elective2_MobileApp\EatSpinApp\EatSpinApp\bin\Debug\netstandard2.0\EatSpinApp.deps.json
+E:\Github\Elective2_MobileApp\EatSpinApp\EatSpinApp\bin\Debug\netstandard2.0\EatSpinApp.dll
+E:\Github\Elective2_MobileApp\EatSpinApp\EatSpinApp\bin\Debug\netstandard2.0\EatSpinApp.pdb
+E:\Github\Elective2_MobileApp\EatSpinApp\EatSpinApp\obj\Debug\netstandard2.0\EatSpinApp.csproj.CoreCompileInputs.cache
+E:\Github\Elective2_MobileApp\EatSpinApp\EatSpinApp\obj\Debug\netstandard2.0\EatSpinApp.AssemblyInfoInputs.cache
+E:\Github\Elective2_MobileApp\EatSpinApp\EatSpinApp\obj\Debug\netstandard2.0\EatSpinApp.AssemblyInfo.cs
+E:\Github\Elective2_MobileApp\EatSpinApp\EatSpinApp\obj\Debug\netstandard2.0\EatSpinApp.dll
+E:\Github\Elective2_MobileApp\EatSpinApp\EatSpinApp\obj\Debug\netstandard2.0\EatSpinApp.pdb
+E:\Github\Elective2_MobileApp\EatSpinApp\EatSpinApp\obj\Debug\netstandard2.0\EatSpinApp.csprojAssemblyReference.cache
