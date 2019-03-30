@@ -9,7 +9,7 @@
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height=".1*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
@@ -42,7 +42,7 @@
                                         <Label Text="Restaurant Name:"/>
                                         <Label Text="{Binding RestaurantName}"
                                                FontAttributes="Bold"
-                                               FontSize="Medium"/>
+                                               FontSize="Small"/>
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal"
                                                  Grid.Row="1">
