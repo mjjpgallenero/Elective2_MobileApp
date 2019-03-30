@@ -86,7 +86,7 @@ namespace EatSpinApp.ViewModels
 
         private void ApplyFiltersProc()
         {
-            if (RestaurantTags.Count == 0)
+            if (RestaurantTags.Count == 0 || RestaurantLocations.Count == 0)
                 Application.Current.MainPage.DisplayAlert("Error", "No filters selected.", "Ok");
             else
             {
