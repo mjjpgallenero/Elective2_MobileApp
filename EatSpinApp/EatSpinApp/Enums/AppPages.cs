@@ -2,6 +2,6 @@
 {
     public enum AppPages
     {
-        MainPage, SetRestaurantFiltersView, AddNewRestaurantFilterView, MainNavigationPage
+        MainPage, SetRestaurantFiltersView, MainNavigationPage, UserHistoryView
     }
 }

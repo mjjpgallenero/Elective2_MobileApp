@@ -19,7 +19,7 @@ namespace EatSpinApp
         private IRepository repository;
         private readonly INavigationService _navigationService;
         private string _selectedRestaurantTag;
-        private SetRestaurantFiltersViewModel _setRestaurantFiltersViewModel;
+        private readonly SetRestaurantFiltersViewModel _setRestaurantFiltersViewModel;
         private string _selectedRestaurantLocation;
 
         public AddRestaurantTagPopupViewModel(INavigationService navigationService, SetRestaurantFiltersViewModel setRestaurantFiltersViewModel)

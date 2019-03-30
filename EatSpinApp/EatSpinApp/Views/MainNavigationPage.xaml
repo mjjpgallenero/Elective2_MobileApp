@@ -2,11 +2,12 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:eatSpinApp="clr-namespace:EatSpinApp;assembly=EatSpinApp"
+             xmlns:views="clr-namespace:EatSpinApp.Views;assembly=EatSpinApp"
              x:Class="EatSpinApp.Views.MainNavigationPage"
              >
   <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
         <eatSpinApp:MainPage Title="SPIN!"/>
-        <ContentPage Title="Your History"/>
+        <views:UserHistoryView Title="Your History"/>
     </TabbedPage.Children>
 </TabbedPage>

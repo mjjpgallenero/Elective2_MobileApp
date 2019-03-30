@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:EatSpinApp.ViewModels;assembly=EatSpinApp"
+             x:Class="EatSpinApp.Views.UserHistoryView">
+    <!--<ContentPage.BindingContext>
+        <viewModels:UserHistoryViewModel/>
+    </ContentPage.BindingContext>-->
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" 
+                  Margin="5"
+                  Padding="3">
+                <Label Text="Your confirmed restaurants: "
+                       FontSize="Large"
+                       FontAttributes="Bold"/>
+            </Grid>
+
+            <Grid Grid.Row="1" 
+                  Margin="3"
+                  Padding="3">
+                <ListView ItemsSource="{Binding ConfirmedRestaurants}"
+                          HasUnevenRows="True"
+                          >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="3">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackLayout Orientation="Horizontal"
+                                                 Grid.Row="0">
+                                        <Label Text="Restaurant Name:"/>
+                                        <Label Text="{Binding RestaurantName}"
+                                               FontAttributes="Bold"
+                                               FontSize="Medium"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal"
+                                                 Grid.Row="1">
+                                        <Label Text="Restaurant Address:"/>
+                                        <Label Text="{Binding Address}"
+                                               FontSize="Small"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal"
+                                                 Grid.Row="2">
+                                        <Label Text="Contact Number:"/>
+                                        <Label Text="{Binding ContactNumber}"
+                                               FontSize="Small"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal"
+                                                 Grid.Row="3">
+                                        <Label Text="Tag:"/>
+                                        <Label Text="{Binding RestaurantTag}"
+                                               FontSize="Small"/>
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

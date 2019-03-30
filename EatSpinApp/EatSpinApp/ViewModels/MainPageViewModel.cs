@@ -11,6 +11,7 @@ using EatSpinApp.Enums;
 using EatSpinApp.Models;
 using EatSpinApp.Repository;
 using EatSpinApp.Repository.LocalRepository;
+using EatSpinApp.ViewModels;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using Xamarin.Forms;
@@ -22,13 +23,15 @@ namespace EatSpinApp
     {
         private readonly INavigationService _navigationService;
         private IRepository repository;
+        private readonly UserHistoryViewModel _userHistoryViewModel;
         private Restaurant _randomizedRestaurant;
 
         static Random random = new Random();
 
-        public MainPageViewModel(INavigationService navigationService)
+        public MainPageViewModel(INavigationService navigationService, UserHistoryViewModel userHistoryViewModel)
         {
             _navigationService = navigationService;
+            _userHistoryViewModel = userHistoryViewModel;
             repository = new LocalRepository();
             foreach (var restaurant in repository.Restaurant.GetRange())
             {
@@ -57,6 +60,14 @@ namespace EatSpinApp
                 int r = random.Next(RestaurantList.Count);
                 RandomizedRestaurant = RestaurantList[r];
             }
+
+            Application.Current.MainPage.DisplayAlert("Confirmation",
+                "Will you choose this restaurant?", "Yes",
+                "No").ContinueWith(t =>
+            {
+                if (t.Result)
+                _userHistoryViewModel.ConfirmedRestaurants.Add(RandomizedRestaurant);
+            }, TaskScheduler.FromCurrentSynchronizationContext());
         }
 
         public ICommand NavigateToSettingsCommand => new Command(NavigateToSettingsProc);

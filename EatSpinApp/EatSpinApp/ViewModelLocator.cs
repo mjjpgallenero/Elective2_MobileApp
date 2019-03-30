@@ -12,6 +12,7 @@ namespace EatSpinApp
             SimpleIoc.Default.Register<MainPageViewModel>();
             SimpleIoc.Default.Register<SetRestaurantFiltersViewModel>();
             SimpleIoc.Default.Register<AddRestaurantTagPopupViewModel>();
+            SimpleIoc.Default.Register<UserHistoryViewModel>();
         }
 
         public MainPageViewModel MainPageViewModel
@@ -26,6 +27,11 @@ namespace EatSpinApp
         public AddRestaurantTagPopupViewModel AddRestaurantTagPopupViewModel
         {
             get { return ServiceLocator.Current.GetInstance<AddRestaurantTagPopupViewModel>(); }
+        }
+
+        public UserHistoryViewModel UserHistoryViewModel
+        {
+            get { return ServiceLocator.Current.GetInstance<UserHistoryViewModel>(); }
         }
     }
 }
